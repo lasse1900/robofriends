@@ -10,30 +10,18 @@ class App extends Component {
       robots: [],
       searchfield: ''
     }
-    console.log('cunstructor')
   }
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => {
-        return response.json();
-      })
-      .then(users => {
-        this.setState({ robots: users });
-      })
-    // this.setState({robots: robots});
-    console.log('componentDidMount')
+      .then(response => response.json())
+      .then(users => this.setState({ robots: users }))
   }
 
   // onSearchChange(event) { OBS !!!
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
-    // const filteredRobots = this.state.robots.filter(robot => {
-    //   return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
-    // })
-    // console.log(filteredRobots);
   }
-
 
   render() {
     const filteredRobots = this.state.robots.filter(robot => {
@@ -48,12 +36,10 @@ class App extends Component {
           <h1 className='f2'>RoboFriends</h1>
           <SearchBox searchChange={this.onSearchChange} />
           <CardList robots={filteredRobots} />
-          {/* <CardList robots={this.state.robots} />  */}
         </div>
       );
     }
   }
 }
-
 
 export default App;
