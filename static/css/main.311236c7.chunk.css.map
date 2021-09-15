@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,SAAU,CACV,sBAAuB,CACvB,iDAKF","file":"main.311236c7.chunk.css","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n  background: linear-gradient(\n    to left,\n    rgba(7, 27, 82, 1) 0%,\n    rgba(0, 128, 128, 1) 100%\n  );\n}\n\n"]}
